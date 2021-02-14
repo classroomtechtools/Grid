@@ -12,7 +12,7 @@ Two features of this library are that it takes the 2d array you send it, and as 
 
 ```js
 const values = [ ["one", "two"], [1, 2] ];
-const grid = Grid.new_(values);
+const grid = Grid.create(values);
 for (const row of grid) {
   Logger.log(row.json);  // {one: 1, two: 2}
 }
@@ -22,7 +22,7 @@ You can use destructuring as well:
 
 ```js
 const values = [ ["one", "two"], [1, 2] ];
-const grid = Grid.new_(values);
+const grid = Grid.create(values);
 for (const {json} of grid) {
   Logger.log(json);  // {one: 1, two: 2}
 }
@@ -32,7 +32,7 @@ But rows often need to have calculated values depending on their values, so if y
 
 ```js
 const values = [ ["firstName", "lastName"], ["S", "Holmes"] ];
-const grid = Grid.new_(values, {
+const grid = Grid.create(values, {
   fullName (json) {
     const {firstName, lastName} = json;
     return `${firstName} ${lastName}`;

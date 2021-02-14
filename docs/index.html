@@ -101,21 +101,21 @@
 </ul>
 <p>Two features of this library are that it takes the 2d array you send it, and as you go through the <code>for/of</code> (in V8) loop, it produces a row object:</p>
 <pre class="prettyprint source lang-js"><code>const values = [ [&quot;one&quot;, &quot;two&quot;], [1, 2] ];
-const grid = Grid.new_(values);
+const grid = Grid.create(values);
 for (const row of grid) {
   Logger.log(row.json);  // {one: 1, two: 2}
 }
 </code></pre>
 <p>You can use destructuring as well:</p>
 <pre class="prettyprint source lang-js"><code>const values = [ [&quot;one&quot;, &quot;two&quot;], [1, 2] ];
-const grid = Grid.new_(values);
+const grid = Grid.create(values);
 for (const {json} of grid) {
   Logger.log(json);  // {one: 1, two: 2}
 }
 </code></pre>
 <p>But rows often need to have calculated values depending on their values, so if you have a <code>firstName</code> header and a <code>lastName</code> header, and you want a <code>full name</code> header, just calculate it:</p>
 <pre class="prettyprint source lang-js"><code>const values = [ [&quot;firstName&quot;, &quot;lastName&quot;], [&quot;S&quot;, &quot;Holmes&quot;] ];
-const grid = Grid.new_(values, {
+const grid = Grid.create(values, {
   fullName (json) {
     const {firstName, lastName} = json;
     return `${firstName} ${lastName}`;
