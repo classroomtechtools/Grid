@@ -7,6 +7,7 @@ function module () {
 /**
  * Create a new grid
  * @param {Array[]} data2d - A 2d array, can use what is returned from `setValues`
+ * @param {Object} [calculateProps] - An object where each key is a callback, taking one parameter `json`
  * @returns {Grid}
  * @example
 const values = range.getValues();

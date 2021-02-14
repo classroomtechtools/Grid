@@ -4,7 +4,7 @@
     },
     "plugins": ["plugins/markdown"],
     "templates": {
-        "referenceTitle": "Unit Testing for Google appsScripts (Utgs) by Classroom Tech Tools"
+        "referenceTitle": "Grid  by Classroom Tech Tools"
     },
     "markdown": {
         "excludeTags": ["author"]
