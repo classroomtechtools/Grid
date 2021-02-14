@@ -1,13 +1,13 @@
 /**
  * Class which can be iterated over and produces json for each row
  * @example
-const grid = Grid.new_([["one", "two"], [1, 2]]);
+const grid = Grid.create([["one", "two"], [1, 2]]);
 for (const {json} of row) {
   Logger.log(json);  // {one: 1, two: 2}
 }
  * @example
 // using calculatedProps
-const grid = Grid.new_([["one", "two"], [1, 2]], {
+const grid = Grid.create([["one", "two"], [1, 2]], {
   sum (json) {
     // use header names as keys on json
     return json.one + json.two;
@@ -20,7 +20,7 @@ for (const {json} of row) {
 class Grid {
 
   /**
-   * Created either via call to `Grid.new_` or `Grid.namedValues`, but class can be returned by `Grid.module()`
+   * Created either via call to `Grid.create` or `Grid.namedValues`, but class can be returned by `Grid.module()`
    * @param {Object} [np] - named parameters
    * @param {Array[]} [np.data2d] - 2d array, can be set after instance creation if necessary
    * @param {Object} [np.calculatedProps] - keys repesent the header, and the values should be functions that return the calculated value for that header for any object

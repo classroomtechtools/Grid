@@ -11,12 +11,12 @@ function module () {
  * @returns {Grid}
  * @example
 const values = range.getValues();
-const grid = Grid.new_(values);
+const grid = Grid.create(values);
 for (const {json} of grid) {
   Logger.log(json);
 }
  */
-function new_ (data2d, calculatedProps={}) {
+function create (data2d, calculatedProps={}) {
   const {Grid} = Import;
   return new Grid();
 }

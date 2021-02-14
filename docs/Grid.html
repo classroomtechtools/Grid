@@ -73,7 +73,7 @@
 
     
 
-    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li><li id="Row-nav"><a href="Row.html">Row</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#fromNamedValues">fromNamedValues</a></li><li><a href="global.html#new_">new_</a></li></ul>
+    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li><li id="Row-nav"><a href="Row.html">Row</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#create">create</a></li><li><a href="global.html#fromNamedValues">fromNamedValues</a></li></ul>
   </nav>
 
   <div id="main">
@@ -128,7 +128,7 @@
 
 
   <div class="description">
-    <p>Created either via call to <code>Grid.new_</code> or <code>Grid.namedValues</code>, but class can be returned by <code>Grid.module()</code></p>
+    <p>Created either via call to <code>Grid.create</code> or <code>Grid.namedValues</code>, but class can be returned by <code>Grid.module()</code></p>
   </div>
 
 
@@ -378,14 +378,14 @@
     <h5 id="Grid-examples">Examples</h5>
     
 
-  <pre class="prettyprint"><code>const grid = Grid.new_([["one", "two"], [1, 2]]);
+  <pre class="prettyprint"><code>const grid = Grid.create([["one", "two"], [1, 2]]);
 for (const {json} of row) {
   Logger.log(json);  // {one: 1, two: 2}
 }</code></pre>
 
 
   <pre class="prettyprint"><code>// using calculatedProps
-const grid = Grid.new_([["one", "two"], [1, 2]], {
+const grid = Grid.create([["one", "two"], [1, 2]], {
   sum (json) {
     // use header names as keys on json
     return json.one + json.two;
