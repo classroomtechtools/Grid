@@ -21,9 +21,9 @@ class Grid {
 
   /**
    * Created either via call to `Grid.new_` or `Grid.namedValues`, but class can be returned by `Grid.module()`
-   * @param {Object} np - named parameters
-   * @param {Array[]} data2d - 2d array
-   * @param {Object} calculatedProps - keys repesent the header, and the values should be functions that return the calculated value for that header for any object
+   * @param {Object} [np] - named parameters
+   * @param {Array[]} [np.data2d] - 2d array, can be set after instance creation if necessary
+   * @param {Object} [np.calculatedProps] - keys repesent the header, and the values should be functions that return the calculated value for that header for any object
    */
   constructor ({data2d=[], calculatedProps={}}={}) {
     this.data2d = data2d;
@@ -77,7 +77,21 @@ class Grid {
   }
 }
 
+/**
+ * Instances of `Row` are returned in the iterator
+ * @property {String[]} headers - the first row of the `data2d` passed
+ * @property {Any[]} values - the raw row as an array, as it appears in the spreadsheet
+ * @property {Number} idx - the row number, 1 indexed
+ */
 class Row {
+
+  /**
+   * Creates a row
+   * @param {Object} np - named parameter
+   * @param {String[]} np.headers - the order of headers should match that appearing in `values`
+   * @param {Any[]} np.values - the order of values should match that appearing in `headers`
+   * @param {Object} np.calculatedProps - keys are header names, returned values are the values for that row. Each value is a function, taking one parameter `json`
+   */
   constructor ({headers, values, idx, calculatedProps}) {
     this.headers = headers;
     this.values = values;

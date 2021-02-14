@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      Global - Documentation
+      Row - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -79,7 +79,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        Global
+        Row
       </h1>
     
 
@@ -90,10 +90,14 @@
     
       <h2>
         
-        
+        Row
         
       </h2>
 
+      
+        <div class="class-description">
+          <p>Instances of <code>Row</code> are returned in the iterator</p>
+        </div>
       
     
   </header>
@@ -103,7 +107,322 @@
       
         
 
+
+  
+    <h2>Constructor</h2>
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#Row">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="Row">
+      <span class="type-signature"></span>new Row<span class="signature">(np)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Creates a row</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
         
+          <td class="name"><code>np</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Object
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>named parameter</p>
+          
+            <h6>Properties</h6>
+            
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>headers</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the order of headers should match that appearing in <code>values</code></p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>values</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;Any>
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the order of values should match that appearing in <code>headers</code></p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>calculatedProps</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Object
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>keys are header names, returned values are the values for that row. Each value is a function, taking one parameter <code>json</code></p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+  <h5 class="subsection-title">Properties:</h5>
+
+  
+
+<table class="props">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+
+    <tr>
+      
+        <td class="name"><code>headers</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the first row of the <code>data2d</code> passed</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>values</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      Array.&lt;Any>
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the raw row as an array, as it appears in the spreadsheet</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>idx</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      Number
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the row number, 1 indexed</p>
+          </td>
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+
 
 <dl class="details">
 
@@ -132,6 +451,15 @@
   
 
   
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="modules_Grid.js.html">modules/Grid.js</a>, <a href="modules_Grid.js.html#line86">line 86</a>
+        </li>
+      </ul>
+    </dd>
+  
 
   
 
@@ -141,7 +469,18 @@
 </dl>
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
       
     </div>
 
@@ -157,388 +496,6 @@
 
     
 
-    
-      <h3 class="subsection-title">Methods</h3>
-
-      
-        
-
-
-  
-
-  <span class='name-container'>
-    <a class="link-icon" href="#fromNamedValues">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h4 class="name" id="fromNamedValues">
-      <span class="type-signature"></span>fromNamedValues<span class="signature">(obj)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span>
-    </h4>
-  </span>
-
-  
-
-
-
-  <div class="description">
-    <p>Pass in the named values property of the event from the <code>onSubmit</code> callback</p>
-  </div>
-
-
-
-
-
-
-
-  <h5>Parameters:</h5>
-  
-
-<table class="params">
-  <thead>
-    <tr>
-      
-        <th>Name</th>
-      
-
-      <th>Type</th>
-
-      
-
-      
-
-      <th class="last">Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    
-      <tr>
-        
-          <td class="name"><code>obj</code></td>
-        
-
-        <td class="type">
-          
-            
-    <span class="param-type">
-      Object
-    </span>
-
-    
-
-
-          
-        </td>
-
-        
-
-        
-
-        <td class="description last">
-          <p>the named values</p>
-          
-        </td>
-      </tr>
-
-    
-  </tbody>
-</table>
-
-
-
-
-
-<dl class="details">
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source">
-      <ul class="dummy">
-        <li>
-          <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line37">line 37</a>
-        </li>
-      </ul>
-    </dd>
-  
-
-  
-
-  
-
-  
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="example-container">
-    <a class="link-icon" href="#fromNamedValues-examples">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h5 id="fromNamedValues-examples">Example</h5>
-    
-
-  <pre class="prettyprint"><code>function onSubmit(event); {
-  const grid = Grid.fromNamedValues(event.values);
-  for (const {json} of grid) {
-    Logger.log(json);
-  }
-}</code></pre>
-
-
-  </div>
-
-
-      
-        
-
-
-  
-
-  <span class='name-container'>
-    <a class="link-icon" href="#new_">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h4 class="name" id="new_">
-      <span class="type-signature"></span>new_<span class="signature">(data2d, calculateProps<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span>
-    </h4>
-  </span>
-
-  
-
-
-
-  <div class="description">
-    <p>Create a new grid</p>
-  </div>
-
-
-
-
-
-
-
-  <h5>Parameters:</h5>
-  
-
-<table class="params">
-  <thead>
-    <tr>
-      
-        <th>Name</th>
-      
-
-      <th>Type</th>
-
-      
-        <th>Attributes</th>
-      
-
-      
-
-      <th class="last">Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    
-      <tr>
-        
-          <td class="name"><code>data2d</code></td>
-        
-
-        <td class="type">
-          
-            
-    <span class="param-type">
-      Array.&lt;Array>
-    </span>
-
-    
-
-
-          
-        </td>
-
-        
-          <td class="attributes">
-            
-
-            
-
-            
-          </td>
-        
-
-        
-
-        <td class="description last">
-          <p>A 2d array, can use what is returned from <code>setValues</code></p>
-          
-        </td>
-      </tr>
-
-    
-      <tr>
-        
-          <td class="name"><code>calculateProps</code></td>
-        
-
-        <td class="type">
-          
-            
-    <span class="param-type">
-      Object
-    </span>
-
-    
-
-
-          
-        </td>
-
-        
-          <td class="attributes">
-            
-              &lt;optional><br>
-            
-
-            
-
-            
-          </td>
-        
-
-        
-
-        <td class="description last">
-          <p>An object where each key is a callback, taking one parameter <code>json</code></p>
-          
-        </td>
-      </tr>
-
-    
-  </tbody>
-</table>
-
-
-
-
-
-<dl class="details">
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source">
-      <ul class="dummy">
-        <li>
-          <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line19">line 19</a>
-        </li>
-      </ul>
-    </dd>
-  
-
-  
-
-  
-
-  
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="example-container">
-    <a class="link-icon" href="#new_-examples">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h5 id="new_-examples">Example</h5>
-    
-
-  <pre class="prettyprint"><code>const values = range.getValues();
-const grid = Grid.new_(values);
-for (const {json} of grid) {
-  Logger.log(json);
-}</code></pre>
-
-
-  </div>
-
-
-      
     
 
     

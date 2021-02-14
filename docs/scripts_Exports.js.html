@@ -70,12 +70,12 @@
 
   <nav>
     <h3 class="reference-title">
-      Unit Testing for Google appsScripts (Utgs) by Classroom Tech Tools
+      Grid  by Classroom Tech Tools
     </h3>
 
     
 
-    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#fromNamedValues">fromNamedValues</a></li><li><a href="global.html#new_">new_</a></li></ul>
+    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li><li id="Row-nav"><a href="Row.html">Row</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#fromNamedValues">fromNamedValues</a></li><li><a href="global.html#new_">new_</a></li></ul>
   </nav>
 
   <div id="main">
@@ -99,6 +99,7 @@
 /**
  * Create a new grid
  * @param {Array[]} data2d - A 2d array, can use what is returned from `setValues`
+ * @param {Object} [calculateProps] - An object where each key is a callback, taking one parameter `json`
  * @returns {Grid}
  * @example
 const values = range.getValues();

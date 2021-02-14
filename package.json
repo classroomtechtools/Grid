@@ -1,7 +1,7 @@
 {
-  "name": "appsscript-module-template",
+  "name": "@classroomtechtools/grid",
   "version": "1.0.0",
-  "repository": "https://github.com/classroomtechtools/appsscript-module-template",
+  "repository": "https://github.com/classroomtechtools/Grid",
   "type": "module",
   "license": {
     "type": "MIT",

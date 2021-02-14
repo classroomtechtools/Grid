@@ -68,12 +68,12 @@
 
   <nav>
     <h3 class="reference-title">
-      Unit Testing for Google appsScripts (Utgs) by Classroom Tech Tools
+      Grid  by Classroom Tech Tools
     </h3>
 
     
 
-    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#fromNamedValues">fromNamedValues</a></li><li><a href="global.html#new_">new_</a></li></ul>
+    <h3>Classes</h3><ul><li id="Grid-nav"><a href="Grid.html">Grid</a></li><li id="Row-nav"><a href="Row.html">Row</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#fromNamedValues">fromNamedValues</a></li><li><a href="global.html#new_">new_</a></li></ul>
   </nav>
 
   <div id="main">
@@ -88,6 +88,48 @@
 
       
 
+
+  <section class="readme">
+    <article>
+      <h1>Grid</h1>
+<p>Take a 2d array returned from range.getValues(), and iterate over them. Each row produces a json where headers are keys. Each row can have calculated properties based on values of that row.</p>
+<h2>Getting Started</h2>
+<ul>
+<li>Install via Library ID <code>1aF6ka72qAVEfcYoyvftvTWOxih8wcCPo6TUcxgXTjCnwezIhZS6Fmla5</code></li>
+<li>Use it</li>
+</ul>
+<p>Two features of this library are that it takes the 2d array you send it, and as you go through the <code>for/of</code> (in V8) loop, it produces a row object:</p>
+<pre class="prettyprint source lang-js"><code>const values = [ [&quot;one&quot;, &quot;two&quot;], [1, 2] ];
+const grid = Grid.new_(values);
+for (const row of grid) {
+  Logger.log(row.json);  // {one: 1, two: 2}
+}
+</code></pre>
+<p>You can use destructuring as well:</p>
+<pre class="prettyprint source lang-js"><code>const values = [ [&quot;one&quot;, &quot;two&quot;], [1, 2] ];
+const grid = Grid.new_(values);
+for (const {json} of grid) {
+  Logger.log(json);  // {one: 1, two: 2}
+}
+</code></pre>
+<p>But rows often need to have calculated values depending on their values, so if you have a <code>firstName</code> header and a <code>lastName</code> header, and you want a <code>full name</code> header, just calculate it:</p>
+<pre class="prettyprint source lang-js"><code>const values = [ [&quot;firstName&quot;, &quot;lastName&quot;], [&quot;S&quot;, &quot;Holmes&quot;] ];
+const grid = Grid.new_(values, {
+  fullName (json) {
+    const {firstName, lastName} = json;
+    return `${firstName} ${lastName}`;
+  }
+});
+for (const {json} of grid) {
+  Logger.log(json);  // {firstName: &quot;S&quot;, lastName: &quot;Holmes&quot;, fullName &quot;S Holmes&quot;}
+}
+</code></pre>
+<h2>TODO</h2>
+<p>Calculated values column-wide (such as for indexing).</p>
+<h2>Motivation</h2>
+<p>Taking a 2d array of spreadsheet values is a pretty common thing, might as well make a nice iterator for it.</p>
+    </article>
+  </section>
 
 
     
