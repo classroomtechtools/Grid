@@ -14,32 +14,65 @@ Two features of this library are that it takes the 2d array you send it, and as 
 const values = [ ["one", "two"], [1, 2] ];
 const grid = Grid.create(values);
 for (const row of grid) {
+  Logger.log(row.headers);  // ["one", "two"]
+  Logger.log(row.values);  // [1, 2]
   Logger.log(row.json);  // {one: 1, two: 2}
+  Logger.log(row.idx);  // 1
 }
 ```
 
-You can use destructuring as well:
+And you can iterate over the cells in each row: 
+
+```js
+for (const row of grid) {
+  for (const cell of row) {
+    Logger.log(cell.header);
+    Logger.log(cell.value);
+    Logger.log(cell.idx);
+  }
+}
+```
+
+Destructuring is nice:
 
 ```js
 const values = [ ["one", "two"], [1, 2] ];
 const grid = Grid.create(values);
 for (const {json} of grid) {
-  Logger.log(json);  // {one: 1, two: 2}
+  for (const {one} of json) {
+    Logger.log(one);  // outputs 1, then 2
+  }
 }
 ```
 
-But rows often need to have calculated values depending on their values, so if you have a `firstName` header and a `lastName` header, and you want a `full name` header, just calculate it:
+Many applications with rows in spreadsheets often need to have calculated values depending on the native values. For example, if you have a `firstName` header and a `lastName` header, and you want a `fullName` header, just calculate it by passing the constructor an object:
 
 ```js
 const values = [ ["firstName", "lastName"], ["S", "Holmes"] ];
 const grid = Grid.create(values, {
+  serial (json, row) {
+    // pad so there are six characters
+    return row.idx.toString().padStart(2, '0');
+  },
   fullName (json) {
     const {firstName, lastName} = json;
     return `${firstName} ${lastName}`;
   }
 });
+
 for (const {json} of grid) {
-  Logger.log(json);  // {firstName: "S", lastName: "Holmes", fullName "S Holmes"}
+  Logger.log(json);  
+  // {serial: '01', fullName: "S Holmes", ...}
+}
+```
+
+If you want to re-define the names of your headers, you can do that after initialization (rows objects are created as they are interated over):
+
+```js
+const grid = Grid.create([["one", "two"], [1, 2]]);
+grid.headers = ["ONE", "TWO"];
+for (const {json} of grid) {
+  Logger.log(json);  // {ONE: 1, TWO: 2}
 }
 ```
 

@@ -82,6 +82,7 @@ class Grid {
  * @property {String[]} headers - the first row of the `data2d` passed
  * @property {Any[]} values - the raw row as an array, as it appears in the spreadsheet
  * @property {Number} idx - the row number, 1 indexed
+ * @property {Object} json - the key/value obj for this row
  */
 class Row {
 
@@ -90,7 +91,7 @@ class Row {
    * @param {Object} np - named parameter
    * @param {String[]} np.headers - the order of headers should match that appearing in `values`
    * @param {Any[]} np.values - the order of values should match that appearing in `headers`
-   * @param {Object} np.calculatedProps - keys are header names, returned values are the values for that row. Each value is a function, taking one parameter `json`
+   * @param {Object} np.calculatedProps - keys are header names, returned values are the values for that row. Each value is a function, taking two parameters: `json` and `row`
    */
   constructor ({headers, values, idx, calculatedProps}) {
     this.headers = headers;
@@ -104,7 +105,7 @@ class Row {
     )
     const extendedJson = Object.entries(calculatedProps).reduce(
       (acc, [prop, func]) => {
-        acc[prop] = func(nativeJson);
+        acc[prop] = func(nativeJson, this);
         return acc;
       }, {}
     );
@@ -116,13 +117,27 @@ class Row {
     for (let h = 0; h < this.headers.length; h++) {
       const header = this.headers[h];
       const value = this.json[header];
-      const col = new Column({header, value, idx: h});
+      const col = new Cell({header, value, idx: h});
       yield col;
     }
   }
 }
 
-class Column {
+/**
+ * An individual cell in the row
+ * @property {String} header - header
+ * @property {Any} value - the value at this cell
+ * @property {Number} idx - the index
+ */
+class Cell {
+
+  /**
+   * Created when iterating over row
+   * @param {Object} np - named parameter
+   * @param {String} np.header - header
+   * @param {Any} np.value - the value at this cell
+   * @param {Number} np.idx - the index
+   */
   constructor ({header, value, idx}) {
     this.header = header;
     this.value = value;
