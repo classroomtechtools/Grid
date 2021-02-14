@@ -5,7 +5,8 @@ Take a 2d array returned from range.getValues(), and iterate over them. Each row
 ## Getting Started
 
 - Install via Library ID `1aF6ka72qAVEfcYoyvftvTWOxih8wcCPo6TUcxgXTjCnwezIhZS6Fmla5`
-- Use it
+- Check out [documentation](https://classroomtechtools.github.io/Grid/)
+- Use it for reading in and auto parsing spreadsheet ranges, so that you can just iterate over them and do whatever
 
 Two features of this library are that it takes the 2d array you send it, and as you go through the `for/of` (in V8) loop, it produces a row object:
 
