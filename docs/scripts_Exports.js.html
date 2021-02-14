@@ -110,7 +110,7 @@ for (const {json} of grid) {
  */
 function create (data2d, calculatedProps={}) {
   const {Grid} = Import;
-  return new Grid();
+  return new Grid({data2d, calculatedProps});
 }
 
 
