@@ -127,17 +127,19 @@ for (const {json} of grid) {
   }
 }
 </code></pre>
-<p>Many applications with rows in spreadsheets often need to have calculated values depending on the native values. For example, if you have a <code>firstName</code> header and a <code>lastName</code> header, and you want a <code>fullName</code> header, just calculate it by passing the constructor an object:</p>
+<p>Many applications with rows in spreadsheets often need to have calculated values, sorta like <strong>phantom columns</strong>, whose values are derived from native values in the data range.</p>
+<p>For example, if you have a <code>firstName</code> header and a <code>lastName</code> header, and you want to calculate a <code>fullName</code> header, just calculate it by passing the constructor an object whose keys are the name of the header, and its values are functions.</p>
 <pre class="prettyprint source lang-js"><code>const values = [ [&quot;firstName&quot;, &quot;lastName&quot;], [&quot;S&quot;, &quot;Holmes&quot;] ];
 const grid = Grid.create(values, {
-  serial (json, row) {
-    // pad so there are six characters
-    return row.idx.toString().padStart(2, '0');
-  },
   fullName (json) {
     const {firstName, lastName} = json;
     return `${firstName} ${lastName}`;
-  }
+  },
+  serial (json, row) {
+    // pad so there are two characters
+    return row.idx.toString().padStart(2, '0');
+  },
+
 });
 
 for (const {json} of grid) {
