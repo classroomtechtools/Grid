@@ -1,148 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-      Global - Documentation
-  </title>
-
-  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-  
-
-  
-
-  <!-- start Mixpanel -->
-  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
-  <!-- end Mixpanel -->
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
 </head>
 
 <body>
-  <svg style="display: none;">
-    <defs>
-      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
-      </symbol>
-    </defs>
-  </svg>
 
-  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger" class="navicon-button x">
-    <div class="navicon"></div>
-  </label>
+<div id="main">
 
-  <label for="nav-trigger" class="overlay"></label>
-
-  <div class="top-nav-wrapper">
-    <ul>
-      <li >
-        <a href="index.html">
-          
-            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
-          
-          
-        </a>
-      </li>
-
-      
-
-    </ul>
-  </div>
-
-  <nav>
-    <h3 class="reference-title">
-      Grid  by Classroom Tech Tools
-    </h3>
+    <h1 class="page-title">Global</h1>
 
     
 
-    <h3>Classes</h3><ul><li id="Cell-nav"><a href="Cell.html">Cell</a></li><li id="Grid-nav"><a href="Grid.html">Grid</a></li><li id="Row-nav"><a href="Row.html">Row</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#create">create</a></li><li><a href="global.html#fromNamedValues">fromNamedValues</a></li></ul>
-  </nav>
 
-  <div id="main">
-    
-      <h1 class="page-title">
-        Global
-      </h1>
-    
 
-    
 
 <section>
-  <header>
-    
-      <h2>
-        
-        
-        
-      </h2>
 
-      
+<header>
     
-  </header>
+        <h2></h2>
+        
+    
+</header>
 
-  <article>
+<article>
     <div class="container-overview">
-      
+    
         
 
         
+
 
 <dl class="details">
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 </dl>
 
 
         
-      
+    
     </div>
 
     
@@ -151,39 +87,33 @@
 
     
 
-     
-
     
 
     
 
     
-      <h3 class="subsection-title">Methods</h3>
 
-      
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
         
+            
 
+    
 
-  
+    
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(data2d, calculateProps<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span></h4>
+    
 
-  <span class='name-container'>
-    <a class="link-icon" href="#create">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h4 class="name" id="create">
-      <span class="type-signature"></span>create<span class="signature">(data2d, calculateProps<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span>
-    </h4>
-  </span>
-
-  
+    
 
 
 
-  <div class="description">
+<div class="description">
     <p>Create a new grid</p>
-  </div>
+</div>
 
 
 
@@ -191,108 +121,99 @@
 
 
 
-  <h5>Parameters:</h5>
-  
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
-  <thead>
+    <thead>
     <tr>
-      
+        
         <th>Name</th>
-      
+        
 
-      <th>Type</th>
+        <th>Type</th>
 
-      
+        
         <th>Attributes</th>
-      
+        
 
-      
+        
 
-      <th class="last">Description</th>
+        <th class="last">Description</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
-    
-      <tr>
-        
-          <td class="name"><code>data2d</code></td>
-        
-
-        <td class="type">
-          
-            
-    <span class="param-type">
-      Array.&lt;Array>
-    </span>
-
+    <tbody>
     
 
+        <tr>
+            
+                <td class="name"><code>data2d</code></td>
+            
 
-          
-        </td>
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Array></span>
 
-        
-          <td class="attributes">
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
 
-            
-          </td>
-        
-
-        
-
-        <td class="description last">
-          <p>A 2d array, can use what is returned from <code>setValues</code></p>
-          
-        </td>
-      </tr>
-
-    
-      <tr>
-        
-          <td class="name"><code>calculateProps</code></td>
-        
-
-        <td class="type">
-          
-            
-    <span class="param-type">
-      Object
-    </span>
+            <td class="description last"><p>A 2d array, can use what is returned from <code>setValues</code></p></td>
+        </tr>
 
     
 
-
-          
-        </td>
-
-        
-          <td class="attributes">
+        <tr>
             
-              &lt;optional><br>
+                <td class="name"><code>calculateProps</code></td>
             
 
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
-          </td>
-        
 
-        
-
-        <td class="description last">
-          <p>An object where each key is a callback, taking one parameter <code>json</code></p>
-          
-        </td>
-      </tr>
+            <td class="description last"><p>An object where each key is a callback, taking one parameter <code>json</code></p></td>
+        </tr>
 
     
-  </tbody>
+    </tbody>
 </table>
+
 
 
 
@@ -300,46 +221,42 @@
 
 <dl class="details">
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source">
-      <ul class="dummy">
-        <li>
-          <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line19">line 19</a>
-        </li>
-      </ul>
-    </dd>
-  
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
 
-  
+    
 
-  
+    
 
-  
+    
 </dl>
 
 
@@ -354,49 +271,56 @@
 
 
 
-  <div class="example-container">
-    <a class="link-icon" href="#create-examples">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h5 id="create-examples">Example</h5>
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Grid.html">Grid</a></span>
+
+
+    </dd>
+</dl>
+
     
 
-  <pre class="prettyprint"><code>const values = range.getValues();
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const values = range.getValues();
 const grid = Grid.create(values);
 for (const {json} of grid) {
   Logger.log(json);
 }</code></pre>
 
 
-  </div>
 
-
-      
         
+            
 
+    
 
-  
+    
+    <h4 class="name" id="fromNamedValues"><span class="type-signature"></span>fromNamedValues<span class="signature">(obj)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span></h4>
+    
 
-  <span class='name-container'>
-    <a class="link-icon" href="#fromNamedValues">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h4 class="name" id="fromNamedValues">
-      <span class="type-signature"></span>fromNamedValues<span class="signature">(obj)</span><span class="type-signature"> &rarr; {<a href="Grid.html">Grid</a>}</span>
-    </h4>
-  </span>
-
-  
+    
 
 
 
-  <div class="description">
+<div class="description">
     <p>Pass in the named values property of the event from the <code>onSubmit</code> callback</p>
-  </div>
+</div>
 
 
 
@@ -404,59 +328,56 @@ for (const {json} of grid) {
 
 
 
-  <h5>Parameters:</h5>
-  
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
-  <thead>
+    <thead>
     <tr>
-      
+        
         <th>Name</th>
-      
+        
 
-      <th>Type</th>
+        <th>Type</th>
 
-      
+        
 
-      
+        
 
-      <th class="last">Description</th>
+        <th class="last">Description</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     
-      <tr>
-        
-          <td class="name"><code>obj</code></td>
-        
 
-        <td class="type">
-          
+        <tr>
             
-    <span class="param-type">
-      Object
-    </span>
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the named values</p></td>
+        </tr>
 
     
-
-
-          
-        </td>
-
-        
-
-        
-
-        <td class="description last">
-          <p>the named values</p>
-          
-        </td>
-      </tr>
-
-    
-  </tbody>
+    </tbody>
 </table>
+
 
 
 
@@ -464,46 +385,42 @@ for (const {json} of grid) {
 
 <dl class="details">
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
 
-  
+    
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source">
-      <ul class="dummy">
-        <li>
-          <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line37">line 37</a>
-        </li>
-      </ul>
-    </dd>
-  
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="scripts_Exports.js.html">scripts/Exports.js</a>, <a href="scripts_Exports.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
 
-  
+    
 
-  
+    
 
-  
+    
 </dl>
 
 
@@ -518,16 +435,33 @@ for (const {json} of grid) {
 
 
 
-  <div class="example-container">
-    <a class="link-icon" href="#fromNamedValues-examples">
-      <svg height="20" width="20" style="fill: black;">
-        <use xlink:href="#linkIcon"></use>
-      </svg>
-    </a>
-    <h5 id="fromNamedValues-examples">Example</h5>
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Grid.html">Grid</a></span>
+
+
+    </dd>
+</dl>
+
     
 
-  <pre class="prettyprint"><code>function onSubmit(event); {
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function onSubmit(event); {
   const grid = Grid.fromNamedValues(event.values);
   for (const {json} of grid) {
     Logger.log(json);
@@ -535,33 +469,33 @@ for (const {json} of grid) {
 }</code></pre>
 
 
-  </div>
 
-
-      
+        
     
 
     
 
     
-  </article>
+</article>
+
 </section>
 
 
 
 
-  </div>
+</div>
 
-  <br class="clear">
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Cell.html">Cell</a></li><li><a href="Grid.html">Grid</a></li><li><a href="Row.html">Row</a></li></ul><h3>Global</h3><ul><li><a href="global.html#create">create</a></li><li><a href="global.html#fromNamedValues">fromNamedValues</a></li></ul>
+</nav>
 
-  <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a>
-  </footer>
+<br class="clear">
 
-  <script src="scripts/linenumber.js"></script>
-  <script src="scripts/pagelocation.js"></script>
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Jul 15 2021 19:30:50 GMT+0800 (Malaysia Time)
+</footer>
 
-  
-
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
 </body>
 </html>
