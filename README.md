@@ -17,8 +17,8 @@ Take control of Google spreadsheet data ranges by converting them to jsons, and:
 
 For a spreadsheet with the following values:
 
-|A|B|C|
-|-|-|-|
+|A|B|C|D|
+|-|-|-|-|
 |Student ID|Name|Email1|Email2|
 |564|Noname|noname@example.com|fake@example.com|
 
@@ -31,7 +31,7 @@ const data = SpreadsheetApp.openById(...).getSheetByName(...).getDataRange().get
 … can be converted to jsons with ease:
 
 ```js
-const grid = Grid.create(values);
+const grid = Grid.create(data);
 const jsons = grid.toJsons();
 ```
 
